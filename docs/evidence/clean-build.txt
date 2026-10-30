@@ -1,0 +1,44 @@
+To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: https://docs.gradle.org/4.9/userguide/gradle_daemon.html.
+Daemon will be stopped at the end of the build stopping after processing
+
+> Configure project :
+New Dep: net.minecraftforge:forge:1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12_at_3f175fee7308010856b95653ea278b39eb8f5c64
+
+> Task :clean
+
+> Task :verifyDevelopmentDependencies
+[14:35:44] [main/INFO]: Writing debug log file accesstransform.log
+[14:35:44] [main/INFO]: Access Transformer processor running version 1.0.5+4+02b7b69
+[14:35:44] [main/INFO]: Command line arguments [--inJar, /home/liuqi/codeWorkSpace/Thaumic Reforged/build/fg_cache/net/minecraftforge/forge/1.12.2-14.23.5.2860/forge-1.12.2-14.23.5.2860-injected.jar, --outJar, /home/liuqi/codeWorkSpace/Thaumic Reforged/build/fg_cache/net/minecraftforge/forge/1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12/forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12.jar, --logFile, accesstransform.log, --atFile, /home/liuqi/codeWorkSpace/Thaumic Reforged/.gradle/thaumcraft/tc_at.cfg, --atFile, /home/liuqi/codeWorkSpace/Thaumic Reforged/build/_atJar_6/parent_at.cfg]
+[14:35:44] [main/INFO]: Reading from /home/liuqi/codeWorkSpace/Thaumic Reforged/build/fg_cache/net/minecraftforge/forge/1.12.2-14.23.5.2860/forge-1.12.2-14.23.5.2860-injected.jar
+[14:35:44] [main/INFO]: Writing to /home/liuqi/codeWorkSpace/Thaumic Reforged/build/fg_cache/net/minecraftforge/forge/1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12/forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12.jar
+[14:35:44] [main/INFO]: Transformer file /home/liuqi/codeWorkSpace/Thaumic Reforged/.gradle/thaumcraft/tc_at.cfg
+[14:35:44] [main/INFO]: Transformer file /home/liuqi/codeWorkSpace/Thaumic Reforged/build/_atJar_6/parent_at.cfg
+[14:35:44] [main/WARN]: Found existing output jar /home/liuqi/codeWorkSpace/Thaumic Reforged/build/fg_cache/net/minecraftforge/forge/1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12/forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12.jar, overwriting
+[14:35:45] [main/INFO]: JAR transformation complete /home/liuqi/codeWorkSpace/Thaumic Reforged/build/fg_cache/net/minecraftforge/forge/1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12/forge-1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12.jar
+Creating SRG -> MCP TSRG
+Verified mapped dependency: thaumcraft-223628 (SHA-256 533081a17aebc6ef2740884cd50745678736063b02bc8670eecccc505658d8b9)
+Verified mapped dependency: baubles-227083 (SHA-256 a4fc69e34229f8b89cc76b82d6e162c33cf50a314e7df581a703cfa7b56de0f2)
+
+> Task :compileJava
+> Task :processResources
+> Task :classes
+> Task :jar
+> Task :downloadMcpConfig
+> Task :extractSrg
+> Task :createMcpToSrg
+> Task :reobfJar
+> Task :assemble
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+> Task :check UP-TO-DATE
+> Task :build
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 25s
+9 actionable tasks: 9 executed

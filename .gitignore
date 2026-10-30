@@ -1,0 +1,25 @@
+# Generated state and project-local tools (never redistribute third-party jars).
+.gradle/
+.gradle-user-home/
+.tools/
+build/
+run/
+run-server/
+libs/
+*.log
+hs_err_pid*
+
+# Local configuration / IDE state.
+.env
+.env.*
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+bin/
+out/
+Thumbs.db
+.DS_Store

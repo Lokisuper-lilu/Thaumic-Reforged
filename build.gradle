@@ -1,0 +1,164 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net/' }
+        mavenCentral()
+    }
+    dependencies {
+        // The official 2860 MDK uses ForgeGradle 3.+; pin within that major.
+        classpath 'net.minecraftforge.gradle:ForgeGradle:3.0.197'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
+
+version = '0.1.0'
+group = 'io.github.thaumicreforged'
+archivesBaseName = 'thaumicreforged'
+sourceCompatibility = targetCompatibility = '1.8'
+
+// FML 1.12 reads mcmod.info beside the discovered class directory; it does not
+// combine Gradle's separate classes/resources roots when running from sources.
+sourceSets.main.output.resourcesDir = compileJava.destinationDir
+
+if (JavaVersion.current() != JavaVersion.VERSION_1_8) {
+    throw new GradleException('This project requires JDK 8. Use scripts/gradle.sh or set JAVA_HOME to a JDK 8 installation.')
+}
+
+minecraft {
+    mappings channel: 'snapshot', version: '20171003-1.12'
+    runs {
+        client {
+            workingDirectory project.file('run')
+            // FG3 otherwise calls System.exit(0) in the Gradle daemon after quit.
+            forceExit false
+            environment 'MC_VERSION', '1.12.2'
+            property 'forge.logging.console.level', 'info'
+            jvmArgs '-Xms512m', '-Xmx2G'
+        }
+        server {
+            workingDirectory project.file('run-server')
+            forceExit false
+            environment 'MC_VERSION', '1.12.2'
+            property 'forge.logging.console.level', 'info'
+        }
+    }
+}
+
+repositories {
+    maven {
+        name = 'CurseMaven'
+        url = 'https://cursemaven.com'
+    }
+    mavenCentral()
+}
+
+// CurseMaven also serves original jars for ForgeGradle's _mapped_ URLs. In
+// Gradle 4.9 there are no repository content filters. Let FG's synthetic
+// remapping repository resolve mapped artifacts before querying CurseMaven.
+afterEvaluate {
+    def curseMaven = repositories.getByName('CurseMaven')
+    repositories.remove(curseMaven)
+    repositories.add(curseMaven)
+}
+
+// MCP's legacy merge helpers contain a Side.BUKKIT constant that vanilla Forge
+// does not support (ForgeGradle issue #748). Select the official Forge-compatible
+// helper, and place its two annotation/enum classes first on the dev classpath.
+configurations.all {
+    resolutionStrategy.force 'net.minecraftforge:mergetool:0.2.3.3',
+            'org.ow2.asm:asm:5.2', 'org.ow2.asm:asm-tree:5.2',
+            'org.ow2.asm:asm-util:5.2', 'org.ow2.asm:asm-analysis:5.2'
+}
+
+// The generated legacy joined jar also embeds the older Side enum. Keep the
+// official compatible helper ahead of that jar without rewriting either file.
+tasks.withType(JavaExec) {
+    if (name in ['runClient', 'runServer']) {
+        doFirst {
+            def helper = classpath.files.find { it.name == 'mergetool-0.2.3.3-forge.jar' }
+            if (helper == null) throw new GradleException('Missing Forge-compatible MergeTool helper.')
+            classpath = files(helper) + classpath
+        }
+    }
+}
+
+configurations {
+    thaumcraftDistribution { transitive = false }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2860'
+    implementation 'net.minecraftforge:mergetool:0.2.3.3:forge'
+    thaumcraftDistribution 'curse.maven:thaumcraft-223628:2629023'
+    // Required at compile time AND in the dev client. fg.deobf remaps SRG names
+    // in the Gradle cache, leaving the downloaded jars intact.
+    implementation fg.deobf('curse.maven:thaumcraft-223628:2629023')
+    implementation fg.deobf('curse.maven:baubles-227083:2518667')
+}
+
+// FG3 does not automatically apply a dependency's FMLAT to its generated dev
+// Minecraft jar. Use Thaumcraft's own unmodified rules, outside packaged resources.
+def thaumcraftJar = configurations.thaumcraftDistribution.singleFile
+def thaumcraftHash = java.security.MessageDigest.getInstance('SHA-256').digest(thaumcraftJar.bytes).encodeHex().toString()
+if (thaumcraftHash != '9425f8643581b27ff8845b087c8bc6fc10425a32942f1a3f0e265ce6b38f7b5f') {
+    throw new GradleException('Thaumcraft distribution checksum differs from the verified CurseForge BETA26 file.')
+}
+def thaumcraftAt = file('.gradle/thaumcraft/tc_at.cfg')
+new java.util.zip.ZipFile(thaumcraftJar).withCloseable { zip ->
+    def rules = zip.getInputStream(zip.getEntry('META-INF/tc_at.cfg')).bytes
+    thaumcraftAt.parentFile.mkdirs()
+    if (!thaumcraftAt.exists() || !java.util.Arrays.equals(thaumcraftAt.bytes, rules)) thaumcraftAt.bytes = rules
+}
+minecraft.accessTransformer thaumcraftAt
+
+// FG3 can log a remapper failure and let a later Maven repo supply the original
+// jar. Refuse that fallback: a successful compile must use transformed binaries.
+task verifyDevelopmentDependencies {
+    group = 'verification'
+    description = 'Reject unmapped Thaumcraft/Baubles jars on the development classpath.'
+    doLast {
+        def originals = [
+                'thaumcraft-223628': '9425f8643581b27ff8845b087c8bc6fc10425a32942f1a3f0e265ce6b38f7b5f',
+                'baubles-227083': 'b32010b2f2778aa1188585e7ead91ad46d4cb2c715f9c778a61848ba7fe51f8d'
+        ]
+        def artifacts = configurations.compileClasspath.resolvedConfiguration.resolvedArtifacts
+        originals.each { name, originalHash ->
+            def artifact = artifacts.find { it.moduleVersion.id.group == 'curse.maven' && it.name == name }
+            if (artifact == null || !artifact.moduleVersion.id.version.contains('_mapped_')) {
+                throw new GradleException("Missing mapped development dependency: $name")
+            }
+            def hash = java.security.MessageDigest.getInstance('SHA-256').digest(artifact.file.bytes).encodeHex().toString()
+            if (hash == originalHash) {
+                throw new GradleException("Unmapped $name returned by Maven; inspect the ForgeGradle remapper error above.")
+            }
+            logger.lifecycle("Verified mapped dependency: $name (SHA-256 $hash)")
+        }
+    }
+}
+compileJava.dependsOn verifyDevelopmentDependencies
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    inputs.property 'version', project.version
+    inputs.property 'mcversion', '1.12.2'
+    filteringCharset = 'UTF-8'
+    filesMatching('mcmod.info') {
+        expand(version: project.version, mcversion: '1.12.2')
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Specification-Title': 'Thaumic Reforged',
+                'Specification-Version': '1',
+                'Implementation-Title': project.name,
+                'Implementation-Version': project.version
+    }
+}
+
+// Preserve the official MDK reobfuscation step. Dependencies are never shaded.
+jar.finalizedBy('reobfJar')

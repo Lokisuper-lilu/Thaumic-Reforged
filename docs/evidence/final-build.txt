@@ -1,0 +1,32 @@
+To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: https://docs.gradle.org/4.9/userguide/gradle_daemon.html.
+Daemon will be stopped at the end of the build stopping after processing
+
+> Configure project :
+New Dep: net.minecraftforge:forge:1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12_at_3f175fee7308010856b95653ea278b39eb8f5c64
+
+> Task :verifyDevelopmentDependencies
+Verified mapped dependency: thaumcraft-223628 (SHA-256 533081a17aebc6ef2740884cd50745678736063b02bc8670eecccc505658d8b9)
+Verified mapped dependency: baubles-227083 (SHA-256 a4fc69e34229f8b89cc76b82d6e162c33cf50a314e7df581a703cfa7b56de0f2)
+
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :jar
+> Task :downloadMcpConfig
+> Task :extractSrg UP-TO-DATE
+> Task :createMcpToSrg UP-TO-DATE
+> Task :reobfJar
+> Task :assemble
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+> Task :check UP-TO-DATE
+> Task :build
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 7s
+8 actionable tasks: 4 executed, 4 up-to-date

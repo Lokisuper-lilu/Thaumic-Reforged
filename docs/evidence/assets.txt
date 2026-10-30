@@ -1,0 +1,1 @@
+PASS: 1290 unique Minecraft asset objects; all sizes and SHA-1 hashes match the official 1.12 index.

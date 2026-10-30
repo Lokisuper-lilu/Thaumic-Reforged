@@ -1,0 +1,196 @@
+To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: https://docs.gradle.org/4.9/userguide/gradle_daemon.html.
+Daemon will be stopped at the end of the build stopping after processing
+
+> Configure project :
+New Dep: net.minecraftforge:forge:1.12.2-14.23.5.2860_mapped_snapshot_20171003-1.12_at_3f175fee7308010856b95653ea278b39eb8f5c64
+
+> Task :verifyDevelopmentDependencies
+Verified mapped dependency: thaumcraft-223628 (SHA-256 533081a17aebc6ef2740884cd50745678736063b02bc8670eecccc505658d8b9)
+Verified mapped dependency: baubles-227083 (SHA-256 a4fc69e34229f8b89cc76b82d6e162c33cf50a314e7df581a703cfa7b56de0f2)
+
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :downloadMcpConfig
+> Task :extractSrg UP-TO-DATE
+> Task :createSrgToMcp
+> Task :downloadMCMeta UP-TO-DATE
+> Task :downloadAssets
+> Task :extractNatives
+> Task :makeSrcDirs
+> Task :prepareRuns
+> Task :prepareRunClient
+
+> Task :runClient
+[2026-10-30 14:36:21] [INFO   ] Natives: /home/liuqi/codeWorkSpace/Thaumic Reforged/build/natives 
+[2026-10-30 14:36:21] [INFO   ] Main Class: net.minecraft.launchwrapper.Launch 
+[2026-10-30 14:36:21] [INFO   ] Srg2Mcp: /home/liuqi/codeWorkSpace/Thaumic Reforged/build/createSrgToMcp/output.srg 
+[2026-10-30 14:36:21] [INFO   ] Extra: [] 
+[2026-10-30 14:36:22] [INFO   ] Running with arguments: [--version, 1.12.2, --assetIndex, 1.12, --assetsDir, /home/liuqi/codeWorkSpace/Thaumic Reforged/.gradle-user-home/caches/forge_gradle/assets, --accessToken, {REDACTED}, --userProperties, [], --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker] 
+[14:36:22] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:36:22] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:36:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:36:22] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2860 for Minecraft 1.12.2 loading
+[14:36:22] [main/INFO] [FML]: Java is OpenJDK 64-Bit Server VM, version 1.8.0_504, running on Linux:amd64:7.2.11-200.fc44.x86_64, installed at /home/liuqi/codeWorkSpace/Thaumic Reforged/.tools/jdk8/jre
+[14:36:22] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[14:36:22] [main/ERROR] [FML]: Full: /home/liuqi/codeWorkSpace/Thaumic Reforged/.gradle-user-home/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4/maven-artifact-3.5.3.jar
+[14:36:22] [main/ERROR] [FML]: Trimmed: /home/liuqi/codeworkspace/thaumic reforged/.gradle-user-home/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[14:36:22] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[14:36:22] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
+2026-10-30 14:36:22,655 main WARN Disabling terminal, you're running in an unsupported environment.
+[14:36:22] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[14:36:22] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[14:36:22] [main/INFO] [FML]: Searching /home/liuqi/codeWorkSpace/Thaumic Reforged/run/./mods for mods
+[14:36:22] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:36:22] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[14:36:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:36:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:36:22] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:36:23] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[14:36:23] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:36:23] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[14:36:23] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[14:36:23] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[14:36:23] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[14:36:23] [Client thread/INFO] [minecraft/Minecraft]: Setting user: Player548
+[14:36:25] [Client thread/INFO] [minecraft/Minecraft]: LWJGL Version: 2.9.4
+[14:36:25] [Client thread/INFO] [FML]: -- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Linux (amd64) version 7.2.11-200.fc44.x86_64
+	Java Version: 1.8.0_504, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 833313824 bytes (794 MB) / 1018691584 bytes (971 MB) up to 1908932608 bytes (1820 MB)
+	JVM Flags: 2 total; -Xms512m -Xmx2G
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'AMD' Version: '4.6 (Compatibility Profile) Mesa 26.2.4' Renderer: 'AMD Radeon 780M Graphics (radeonsi, phoenix, ACO, DRM 3.64, 7.2.11-200.fc44.x86_64)'
+[14:36:25] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2860 Initialized
+[14:36:25] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[14:36:25] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
+[14:36:25] [Client thread/INFO] [FML]: Replaced 1227 ore ingredients
+[14:36:25] [Client thread/INFO] [FML]: Searching /home/liuqi/codeWorkSpace/Thaumic Reforged/run/./mods for mods
+[14:36:26] [Client thread/INFO] [FML]: Forge Mod Loader has identified 7 mods to load
+[14:36:26] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, thaumicreforged, thaumcraft, baubles] at CLIENT
+[14:36:26] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, thaumicreforged, thaumcraft, baubles] at SERVER
+[14:36:27] [Client thread/INFO] [minecraft/SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Thaumic Reforged, FMLFileResourcePack:Thaumcraft, FMLFileResourcePack:Baubles
+[14:36:27] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
+[14:36:27] [Client thread/INFO] [FML]: Found 1169 ObjectHolder annotations
+[14:36:27] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[14:36:27] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+[14:36:27] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 106312263 nanos
+[14:36:27] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[14:36:27] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[14:36:27] [Client thread/INFO] [FML]: OBJLoader: Domain thaumcraft has been added.
+[14:36:27] [Client thread/INFO] [thaumicreforged]: Thaumic Reforged 0.1.0: pre-initialization
+[14:36:28] [Client thread/INFO] [FML]: Applying holder lookups
+[14:36:28] [Client thread/INFO] [FML]: Holder lookups applied
+[14:36:28] [Client thread/INFO] [FML]: Applying holder lookups
+[14:36:28] [Client thread/INFO] [FML]: Holder lookups applied
+[14:36:28] [Client thread/INFO] [FML]: Applying holder lookups
+[14:36:28] [Client thread/INFO] [FML]: Holder lookups applied
+[14:36:28] [Client thread/INFO] [FML]: Applying holder lookups
+[14:36:28] [Client thread/INFO] [FML]: Holder lookups applied
+[14:36:28] [Client thread/INFO] [FML]: Injecting itemstacks
+[14:36:28] [Client thread/INFO] [FML]: Itemstack injection complete
+[14:36:28] [Client thread/WARN] [minecraft/SoundManager]: Missing sound for event: thaumcraft:runicshieldcharge
+[14:36:28] [Sound Library Loader/INFO] [minecraft/SoundManager]: Starting up SoundSystem...
+[14:36:29] [Thread-4/INFO] [minecraft/SoundManager]: Initializing LWJGL OpenAL
+[14:36:29] [Thread-4/INFO] [minecraft/SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[14:36:29] [Thread-4/INFO] [minecraft/SoundManager]: OpenAL initialized.
+[14:36:29] [Sound Library Loader/INFO] [minecraft/SoundManager]: Sound engine started
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ns' (model: 'thaumcraft:models/block/arcane_workbench_charger.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ni' (model: 'thaumcraft:models/block/arcane_workbench_charger.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Tf' (model: 'thaumcraft:models/block/arcane_workbench_charger.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'illum' (model: 'thaumcraft:models/block/arcane_workbench_charger.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJModel: A color has already been defined for material 'texture' in 'thaumcraft:models/block/arcane_workbench_charger.mtl'. The color defined by key 'Ks' will not be applied!
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ke' (model: 'thaumcraft:models/block/arcane_workbench_charger.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ns' (model: 'thaumcraft:models/block/pillar.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ni' (model: 'thaumcraft:models/block/pillar.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Tf' (model: 'thaumcraft:models/block/pillar.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'illum' (model: 'thaumcraft:models/block/pillar.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJModel: A color has already been defined for material 'texture' in 'thaumcraft:models/block/pillar.mtl'. The color defined by key 'Ks' will not be applied!
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ke' (model: 'thaumcraft:models/block/pillar.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ns' (model: 'thaumcraft:models/block/thaumatorium.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ni' (model: 'thaumcraft:models/block/thaumatorium.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Tf' (model: 'thaumcraft:models/block/thaumatorium.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'illum' (model: 'thaumcraft:models/block/thaumatorium.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJModel: A color has already been defined for material 'texture' in 'thaumcraft:models/block/thaumatorium.mtl'. The color defined by key 'Ks' will not be applied!
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ke' (model: 'thaumcraft:models/block/thaumatorium.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ns' (model: 'thaumcraft:models/block/golembuilder.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ni' (model: 'thaumcraft:models/block/golembuilder.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Tf' (model: 'thaumcraft:models/block/golembuilder.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'illum' (model: 'thaumcraft:models/block/golembuilder.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJModel: A color has already been defined for material 'texture' in 'thaumcraft:models/block/golembuilder.mtl'. The color defined by key 'Ks' will not be applied!
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ke' (model: 'thaumcraft:models/block/golembuilder.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ns' (model: 'thaumcraft:models/item/scanner.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ni' (model: 'thaumcraft:models/item/scanner.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Tf' (model: 'thaumcraft:models/item/scanner.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'illum' (model: 'thaumcraft:models/item/scanner.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJModel: A color has already been defined for material 'body' in 'thaumcraft:models/item/scanner.mtl'. The color defined by key 'Ks' will not be applied!
+[14:36:30] [Client thread/INFO] [FML]: OBJLoader.MaterialLibrary: key 'Ke' (model: 'thaumcraft:models/item/scanner.mtl') is not currently supported, skipping
+[14:36:30] [Client thread/INFO] [FML]: OBJModel: A color has already been defined for material 'pane' in 'thaumcraft:models/item/scanner.mtl'. The color defined by key 'Ks' will not be applied!
+[14:36:30] [Client thread/INFO] [FML]: Max texture size: 16384
+[14:36:31] [Client thread/INFO] [minecraft/TextureMap]: Created: 1024x512 textures-atlas
+[14:36:32] [Client thread/INFO] [THAUMCRAFT]: Checking for mod & oredict compatibilities
+[14:36:32] [Client thread/INFO] [THAUMCRAFT]: Adding entities to MFR safari net blacklist.
+[14:36:32] [Client thread/INFO] [FML]: Applying holder lookups
+[14:36:32] [Client thread/INFO] [FML]: Holder lookups applied
+[14:36:32] [Client thread/INFO] [thaumicreforged]: Public API linkage OK: Thaumcraft Aspect.AIR=aer, Baubles BaubleType.RING=RING
+[14:36:32] [Client thread/INFO] [FML]: Injecting itemstacks
+[14:36:32] [Client thread/INFO] [FML]: Itemstack injection complete
+[14:36:33] [Client thread/INFO] [THAUMCRAFT]: Loaded 22 research entries from thaumcraft:research/alchemy
+[14:36:33] [Client thread/INFO] [THAUMCRAFT]: Loaded 5 research entries from thaumcraft:research/eldritch
+[14:36:33] [Client thread/INFO] [THAUMCRAFT]: Loaded 20 research entries from thaumcraft:research/basics
+[14:36:33] [Client thread/INFO] [THAUMCRAFT]: Loaded 23 research entries from thaumcraft:research/auromancy
+[14:36:33] [Client thread/INFO] [THAUMCRAFT]: Loaded 12 research entries from thaumcraft:research/scans
+[14:36:33] [Client thread/INFO] [THAUMCRAFT]: Loaded 20 research entries from thaumcraft:research/artifice
+[14:36:33] [Client thread/INFO] [THAUMCRAFT]: Loaded 17 research entries from thaumcraft:research/infusion
+[14:36:33] [Client thread/INFO] [THAUMCRAFT]: Loaded 29 research entries from thaumcraft:research/golemancy
+[14:36:33] [Client thread/INFO] [thaumicreforged]: Thaumic Reforged 0.1.0: initialization complete (environment validation only)
+[14:36:33] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 7 mods
+[14:36:33] [Client thread/INFO] [mojang/NarratorLinux]: Narrator library successfully loaded
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: The following texture errors were found.
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: ==================================================
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:   DOMAIN minecraft
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: --------------------------------------------------
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:   domain minecraft is missing 3 textures
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:     domain minecraft has 2 locations:
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       unknown resourcepack type net.minecraft.client.resources.DefaultResourcePack : Default
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       mod thaumcraft resources at /home/liuqi/codeWorkSpace/Thaumic Reforged/.gradle-user-home/caches/forge_gradle/deobf_dependencies/curse/maven/thaumcraft-223628/2629023_mapped_snapshot_20171003-1.12/thaumcraft-223628-2629023_mapped_snapshot_20171003-1.12.jar
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: -------------------------
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:     The missing resources for domain minecraft are:
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/\thaumcraft\thaumcraft110\bin\assets\thaumcraft\textures\blocks\golembuilder.png.png
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/\thaumcraft\thaumcraft110\src\main\resources\assets\thaumcraft\textures\blocks\arcane_workbench_charger.png.png
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/\thaumcraft\thaumcraft110\src\main\resources\assets\thaumcraft\textures\blocks\thaumatorium.png.png
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: -------------------------
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:     No other errors exist for domain minecraft
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: ==================================================
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: ==================================================
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:   DOMAIN thaumcraft
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: --------------------------------------------------
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:   domain thaumcraft is missing 2 textures
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:     domain thaumcraft has 1 location:
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       mod thaumcraft resources at /home/liuqi/codeWorkSpace/Thaumic Reforged/.gradle-user-home/caches/forge_gradle/deobf_dependencies/curse/maven/thaumcraft-223628/2629023_mapped_snapshot_20171003-1.12/thaumcraft-223628-2629023_mapped_snapshot_20171003-1.12.jar
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: -------------------------
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:     The missing resources for domain thaumcraft are:
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items\scanscreen.png.png
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:       textures/items\scanner.png.png
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: -------------------------
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]:     No other errors exist for domain thaumcraft
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: ==================================================
+[14:36:33] [Client thread/ERROR] [FML.TEXTURE_ERRORS]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+[14:36:34] [Realms Notification Availability checker #1/INFO] [mojang/RealmsClient]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: Forge
+[14:36:38] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: OUTDATED Target: 14.23.5.2864
+[14:37:14] [Client thread/INFO] [minecraft/Minecraft]: Stopping!
+[14:37:14] [Client thread/INFO] [minecraft/SoundManager]: SoundSystem shutting down...
+[14:37:14] [Client thread/WARN] [minecraft/SoundManager]: Author: Paul Lamb, www.paulscode.com
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 5.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/4.9/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 1m 3s
+11 actionable tasks: 7 executed, 4 up-to-date

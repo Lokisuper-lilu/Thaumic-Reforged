@@ -1,0 +1,39 @@
+{
+  "artifact": "build/libs/thaumicreforged-0.1.0.jar",
+  "size": 2664,
+  "sha256": "a13d424f274aba7606a88c089927ebc5aa95d0a12e261c66234c937cb6de98e4",
+  "class_major_version": 52,
+  "entries": [
+    "META-INF/",
+    "META-INF/MANIFEST.MF",
+    "mcmod.info",
+    "io/",
+    "io/github/",
+    "io/github/thaumicreforged/",
+    "io/github/thaumicreforged/ThaumicReforged.class",
+    "pack.mcmeta"
+  ],
+  "metadata": {
+    "modid": "thaumicreforged",
+    "name": "Thaumic Reforged",
+    "description": "神秘重铸：Thaumcraft 6 独立附属模组。当前版本仅验证开发环境。",
+    "version": "0.1.0",
+    "mcversion": "1.12.2",
+    "authorList": [
+      "Thaumic Reforged contributors"
+    ],
+    "credits": "Minecraft Forge, Thaumcraft and Baubles by their respective authors.",
+    "requiredMods": [
+      "forge@[14.23.5.2860,14.24)",
+      "thaumcraft@[6.1.BETA26]",
+      "baubles@[1.5.2]"
+    ],
+    "dependencies": [
+      "forge@[14.23.5.2860,14.24)",
+      "thaumcraft@[6.1.BETA26]",
+      "baubles@[1.5.2]"
+    ],
+    "useDependencyInformation": true
+  },
+  "checks": "ZIP CRC OK; only one project class; no third-party classes, nested JARs, copied AT or probe classes"
+}

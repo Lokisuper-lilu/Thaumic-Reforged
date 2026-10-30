@@ -1,0 +1,14 @@
+[
+  {
+    "modid": "thaumicreforged",
+    "name": "Thaumic Reforged",
+    "description": "神秘重铸：Thaumcraft 6 独立附属模组。当前版本仅验证开发环境。",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "authorList": ["Thaumic Reforged contributors"],
+    "credits": "Minecraft Forge, Thaumcraft and Baubles by their respective authors.",
+    "requiredMods": ["forge@[14.23.5.2860,14.24)", "thaumcraft@[6.1.BETA26]", "baubles@[1.5.2]"],
+    "dependencies": ["forge@[14.23.5.2860,14.24)", "thaumcraft@[6.1.BETA26]", "baubles@[1.5.2]"],
+    "useDependencyInformation": true
+  }
+]

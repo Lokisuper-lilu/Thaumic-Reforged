@@ -1,0 +1,322 @@
+[
+  {
+    "request": "/api/status",
+    "result": {
+      "ok": true,
+      "type": "minecraft-mod",
+      "version": "0.4.20",
+      "loader": "forge",
+      "pid": 30823,
+      "port": 9876,
+      "uptime": 104.8
+    }
+  },
+  {
+    "command": "get_screen_buttons",
+    "params": {},
+    "result": {
+      "screen": "GuiModList",
+      "buttons": [
+        {
+          "id": 6,
+          "x": 177,
+          "y": 202,
+          "w": 200,
+          "h": 20,
+          "label": "Done"
+        },
+        {
+          "id": 20,
+          "x": 10,
+          "y": 191,
+          "w": 118,
+          "h": 20,
+          "label": "Config"
+        },
+        {
+          "id": 21,
+          "x": 10,
+          "y": 213,
+          "w": 118,
+          "h": 20,
+          "label": "Disable"
+        },
+        {
+          "id": 24,
+          "x": 10,
+          "y": 10,
+          "w": 38,
+          "h": 20,
+          "label": "Normal"
+        },
+        {
+          "id": 25,
+          "x": 50,
+          "y": 10,
+          "w": 38,
+          "h": 20,
+          "label": "A-Z"
+        },
+        {
+          "id": 26,
+          "x": 90,
+          "y": 10,
+          "w": 38,
+          "h": 20,
+          "label": "Z-A"
+        }
+      ]
+    }
+  },
+  {
+    "command": "click_button_id",
+    "params": {
+      "id": "6"
+    },
+    "result": {
+      "clicked": true,
+      "button_id": 6,
+      "method": "actionPerformed"
+    }
+  },
+  {
+    "command": "get_screen_buttons",
+    "params": {},
+    "result": {
+      "screen": "GuiMainMenu",
+      "buttons": [
+        {
+          "id": 1,
+          "x": 113,
+          "y": 108,
+          "w": 200,
+          "h": 20,
+          "label": "Singleplayer"
+        },
+        {
+          "id": 2,
+          "x": 113,
+          "y": 132,
+          "w": 200,
+          "h": 20,
+          "label": "Multiplayer"
+        },
+        {
+          "id": 14,
+          "x": 215,
+          "y": 156,
+          "w": 98,
+          "h": 20,
+          "label": "Realms"
+        },
+        {
+          "id": 6,
+          "x": 113,
+          "y": 156,
+          "w": 98,
+          "h": 20,
+          "label": "Mods"
+        },
+        {
+          "id": 0,
+          "x": 113,
+          "y": 192,
+          "w": 98,
+          "h": 20,
+          "label": "Options..."
+        },
+        {
+          "id": 4,
+          "x": 215,
+          "y": 192,
+          "w": 98,
+          "h": 20,
+          "label": "Quit Game"
+        },
+        {
+          "id": 5,
+          "x": 89,
+          "y": 192,
+          "w": 20,
+          "h": 20,
+          "label": ""
+        }
+      ]
+    }
+  },
+  {
+    "command": "screenshot_to_file",
+    "params": {
+      "path": "/home/liuqi/codeWorkSpace/Thaumic Reforged/docs/evidence/main-menu-with-mcp.png"
+    },
+    "result": {
+      "file": "/home/liuqi/codeWorkSpace/Thaumic Reforged/docs/evidence/main-menu-with-mcp.png",
+      "size": 19589
+    }
+  },
+  {
+    "command": "click_button_id",
+    "params": {
+      "id": "6"
+    },
+    "result": {
+      "clicked": true,
+      "button_id": 6,
+      "method": "actionPerformed"
+    }
+  },
+  {
+    "command": "get_screen_buttons",
+    "params": {},
+    "result": {
+      "screen": "GuiModList",
+      "buttons": [
+        {
+          "id": 6,
+          "x": 177,
+          "y": 202,
+          "w": 200,
+          "h": 20,
+          "label": "Done"
+        },
+        {
+          "id": 20,
+          "x": 10,
+          "y": 191,
+          "w": 118,
+          "h": 20,
+          "label": "Config"
+        },
+        {
+          "id": 21,
+          "x": 10,
+          "y": 213,
+          "w": 118,
+          "h": 20,
+          "label": "Disable"
+        },
+        {
+          "id": 24,
+          "x": 10,
+          "y": 10,
+          "w": 38,
+          "h": 20,
+          "label": "Normal"
+        },
+        {
+          "id": 25,
+          "x": 50,
+          "y": 10,
+          "w": 38,
+          "h": 20,
+          "label": "A-Z"
+        },
+        {
+          "id": 26,
+          "x": 90,
+          "y": 10,
+          "w": 38,
+          "h": 20,
+          "label": "Z-A"
+        }
+      ]
+    }
+  },
+  {
+    "command": "select_list_item",
+    "params": {
+      "index": "6"
+    },
+    "result": {
+      "error": "no children() on GuiModList"
+    },
+    "note": "Observed earlier; generic list helper unsupported for this legacy screen."
+  },
+  {
+    "command": "click_button_id",
+    "params": {
+      "id": "6"
+    },
+    "result": {
+      "clicked": true,
+      "button_id": 6,
+      "method": "actionPerformed"
+    }
+  },
+  {
+    "command": "get_screen_buttons",
+    "params": {},
+    "result": {
+      "screen": "GuiMainMenu",
+      "buttons": [
+        {
+          "id": 1,
+          "x": 113,
+          "y": 108,
+          "w": 200,
+          "h": 20,
+          "label": "Singleplayer"
+        },
+        {
+          "id": 2,
+          "x": 113,
+          "y": 132,
+          "w": 200,
+          "h": 20,
+          "label": "Multiplayer"
+        },
+        {
+          "id": 14,
+          "x": 215,
+          "y": 156,
+          "w": 98,
+          "h": 20,
+          "label": "Realms"
+        },
+        {
+          "id": 6,
+          "x": 113,
+          "y": 156,
+          "w": 98,
+          "h": 20,
+          "label": "Mods"
+        },
+        {
+          "id": 0,
+          "x": 113,
+          "y": 192,
+          "w": 98,
+          "h": 20,
+          "label": "Options..."
+        },
+        {
+          "id": 4,
+          "x": 215,
+          "y": 192,
+          "w": 98,
+          "h": 20,
+          "label": "Quit Game"
+        },
+        {
+          "id": 5,
+          "x": 89,
+          "y": 192,
+          "w": 20,
+          "h": 20,
+          "label": ""
+        }
+      ]
+    }
+  },
+  {
+    "command": "click_button_id",
+    "params": {
+      "id": "4"
+    },
+    "result": {
+      "clicked": true,
+      "button_id": 4,
+      "method": "actionPerformed"
+    }
+  }
+]
